@@ -28,7 +28,7 @@ class Solution {
         dfs(s, 0, 0);
         return ans;
     }
-
+// 深度优先搜索方法 
     public void dfs(String s, int segId, int segStart) {
         // 如果找到了 4 段 IP 地址并且遍历完了字符串，那么就是一种答案
         if (segId == SEG_COUNT) { // 修改这里的错误，使用单个等号比较
@@ -68,5 +68,8 @@ class Solution {
                 break;
             }
         }
+         
     }
 }
+//这段代码通过深度优先搜索（DFS）的方式，尝试从给定的字符串中恢复出所有可能的IP地址。
+//在搜索过程中，它考虑了IP地址的四个段，每个段的数值范围是0到255，并且不能有前导零（除非段本身为0）。当找到一个有效的IP地址时，它会被添加到结果列表中。
